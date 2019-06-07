@@ -26,6 +26,7 @@ public class Main {
         Income_Controller controller = new Income_Controller();
         Tax_Calculator_BackBone backend = new Tax_Calculator_BackBone();
         backend.income = user_Income;
+        controller.fiscal_status=fiscal_Status;
 
         System.out.println("You have to pay: "+backend.to_Pay+"$");
 
