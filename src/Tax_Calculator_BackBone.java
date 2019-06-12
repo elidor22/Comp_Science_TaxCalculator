@@ -1,8 +1,9 @@
 
-public class Tax_Calculator_BackBone {
+
+public class Tax_Calculator_BackBone implements java.io.Serializable {
     public double to_Pay;
     Main main = new Main();
-    public float income = main.user_Income;
+    public static float income = Main.user_Income;
     Income_Controller controller = new Income_Controller();
     float tenthpercentage = controller.tenthpercentage;
     float fifteeenthpercentage=controller.fifteeenthpercentage;
@@ -36,6 +37,7 @@ public class Tax_Calculator_BackBone {
                     +(income-tenthpercentage-fifteeenthpercentage-twentyfifthpercentage-twentyeighthpercentage)*0.33;
         }
         if (income>372950){
+            // We get the value of each percentage and then add the plus income - the other part of already used income
             to_Pay = tenthpercentage*0.10+fifteeenthpercentage*0.15+twentyfifthpercentage*0.25+twentyeighthpercentage*0.28+thirtythreeperc*0.33
                     +(income-tenthpercentage-fifteeenthpercentage-twentyfifthpercentage-twentyeighthpercentage-thirtythreeperc)*0.35;
         }
